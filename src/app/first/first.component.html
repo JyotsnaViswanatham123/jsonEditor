@@ -1,0 +1,17 @@
+<mat-accordion>
+    <mat-expansion-panel (opened)="panelOpenState = true"
+                         (closed)="panelOpenState = false">
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                <p class="">{{key}}</p>
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <ng-container *ngIf="isObject(json[key])">
+            <app-first *ngFor="let a of keys(json[key])" [parent]="key" [key]="a" [json]="json[key]"></app-first>
+        </ng-container>
+        <p *ngIf="!isObject(json[key]) && !showInput">{{json[key]}}</p>
+        <input *ngIf="showInput && !isObject(json[key])" type="text" [value]="json[key]"/>
+        <button *ngIf="!isObject(json[key]) && !showInput" (click)="edit()">Edit</button>
+        <button *ngIf="!isObject(json[key])" (click)="save(key, json[key], json)">Save</button>
+    </mat-expansion-panel>
+</mat-accordion>
