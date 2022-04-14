@@ -1,5 +1,6 @@
-<app-first *ngFor="let a of keys(json)" [key]="a" [json]="json"></app-first>
+<!-- <app-first *ngFor="let a of keys(json)" [key]="a" [json]="json"></app-first> -->
 <!-- <app-first></app-first> -->
-
+<!-- <json-editor config="json"></json-editor> -->
+<json-editor [options]="editorOptions" [data]="data"></json-editor>
 
 <router-outlet></router-outlet>

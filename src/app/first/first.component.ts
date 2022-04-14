@@ -29,14 +29,14 @@ export class FirstComponent implements OnInit {
     // // let id = 
     
     // console.log("Parent", this.parent);
-    // if (this.parent === undefined) {
-    //   // this.sampleSrv.jsonArray[this.key] = [];
-    //   // this.arrangeItems(this.sampleSrv.jsonArray)
-    //   this.keyClassName = this.key;
-    // } else {
-    //   this.keyClassName = this.key;
-    //   // this.arrangeItems(this.sampleSrv.jsonArray[this.parent])
-    // }
+    if (this.parent === undefined) {
+      // this.sampleSrv.jsonArray[this.key] = [];
+      // this.arrangeItems(this.sampleSrv.jsonArray)
+      this.keyClassName = this.key;
+    } else {
+      this.keyClassName = this.key;
+      // this.arrangeItems(this.sampleSrv.jsonArray[this.parent])
+    }
     
     // console.log("json", this.sampleSrv.jsonArray);
 

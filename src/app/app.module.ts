@@ -7,6 +7,8 @@ import { FirstComponent } from './first/first.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatExpansionModule} from '@angular/material/expansion';
 // import { TreeviewModule } from 'ngx-treeview';
+import { NgJsonEditorModule } from 'ang-jsoneditor' 
+
 
 
 
@@ -21,6 +23,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     MatExpansionModule,
+    NgJsonEditorModule
     // TreeviewModule.forRoot()
   ],
   providers: [],
